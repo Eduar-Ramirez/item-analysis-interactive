@@ -1,0 +1,30 @@
+# Psychometrics Item Analysis Tool
+
+An interactive, single-file web tool for teaching and practicing **item analysis** in psychometrics courses.
+
+## What it covers
+
+-   **Difficulty index** — dichotomous and polytomous items
+-   **Homogeneity index** — item-test correlation (Pearson)
+-   **Corrected item-rest correlation** — when and why to use it
+-   **Discrimination** — what it means and how to visualize it
+-   **Internal consistency** — relationship between item homogeneity and Cronbach's α
+-   **Validity index** — criterion-related validity at item level
+-   **Chance correction** — adjusting scores for random guessing
+
+## How to use
+
+No installation required. Open `index.html` in any browser.
+
+**Live demo:** <https://eduar-ramirez.github.io/item-analysis-interactive/>
+
+## Built with
+
+-   Vanilla HTML, CSS and JavaScript
+-   [Chart.js](https://www.chartjs.org/) for visualizations
+
+## License
+
+Free to use for educational purposes.
+
+------------------------------------------------------------------------
