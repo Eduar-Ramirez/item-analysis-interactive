@@ -211,10 +211,119 @@
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
 
-  @media(max-width: 700px) {
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
-    .section-hero { padding: 28px 24px; }
-    .section-hero h2 { font-size: 1.6rem; }
+  /* ── TABLET (≤ 900px) ── */
+  @media(max-width: 900px) {
+    main { padding: 24px 16px 48px; }
+
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+
+    .header-brand { padding: 12px 16px; }
+    .header-brand h1 { font-size: 0.95rem; }
+
+    .nav-btn { padding: 14px 14px; font-size: 0.78rem; }
+
+    .tab-btn { padding: 9px 14px; font-size: 0.82rem; }
+
+    .card { padding: 20px 18px; }
+
+    .section-hero { padding: 32px 20px; }
+    .section-hero h2 { font-size: 1.9rem; }
+
+    .formula-wrap { font-size: 1.1rem; padding: 14px 16px; }
+
+    .overview-grid { grid-template-columns: 1fr 1fr; }
+
+    .chart-wrap { height: 220px; }
+    .chart-wrap-tall { height: 260px; }
+  }
+
+  /* ── MOBILE (≤ 600px) ── */
+  @media(max-width: 600px) {
+    main { padding: 16px 12px 40px; }
+
+    /* Header: brand + nav stack vertically */
+    .header-inner { flex-direction: column; align-items: stretch; }
+    .header-brand {
+      padding: 12px 16px 10px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .header-brand h1 { font-size: 0.95rem; margin: 0; }
+    .header-brand span { font-size: 0.65rem; }
+    nav { overflow-x: auto; scrollbar-width: none; }
+    .nav-btn { padding: 10px 12px; font-size: 0.72rem; }
+    .nav-num { width: 16px; height: 16px; font-size: 0.62rem; margin-right: 5px; }
+
+    /* Section hero */
+    .section-hero { padding: 24px 16px; border-radius: 14px; }
+    .section-hero h2 { font-size: 1.5rem; line-height: 1.3; }
+    .section-hero p { font-size: 0.88rem; }
+
+    /* Cards */
+    .card { padding: 16px 14px; border-radius: 14px; margin-bottom: 14px; }
+    .card-title { font-size: 0.95rem; margin-bottom: 14px; }
+
+    /* Grids → single column */
+    .grid-2, .grid-3, .overview-grid { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Tabs: scrollable row, smaller */
+    .tab-bar { gap: 2px; overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; padding-bottom: 2px; }
+    .tab-btn { padding: 8px 12px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
+
+    /* Stat chips: wrap tighter */
+    .stat-row { gap: 8px; }
+    .stat-chip { padding: 10px 12px; min-width: 70px; }
+    .stat-chip .val { font-size: 1.3rem; }
+    .stat-chip .lbl { font-size: 0.68rem; }
+
+    /* Formula */
+    .formula-wrap { font-size: 0.95rem; padding: 12px 14px; letter-spacing: 0; }
+
+    /* Charts */
+    .chart-wrap { height: 200px; }
+    .chart-wrap-tall { height: 240px; }
+
+    /* Tables: always scrollable */
+    table { font-size: 0.8rem; }
+    th, td { padding: 7px 8px; }
+    .item-input { width: 42px; font-size: 0.82rem; }
+
+    /* Result boxes */
+    .result-box { padding: 16px; }
+    .res-val { font-size: 2rem; }
+
+    /* Info boxes */
+    .info-box { font-size: 0.84rem; padding: 12px 14px; }
+
+    /* Range inputs: easier to tap */
+    input[type=range] { height: 6px; }
+
+    /* Scale bar */
+    .scale-bar-wrap { margin: 16px 0; }
+    .scale-labels { font-size: 0.7rem; }
+
+    /* Quiz options */
+    .quiz-opt { padding: 12px 14px; font-size: 0.85rem; }
+
+    /* Overview cards */
+    .overview-card { padding: 18px 16px; }
+    .ov-title { font-size: 1rem; }
+    .ov-desc { font-size: 0.8rem; }
+
+    /* Badge */
+    .badge { font-size: 0.68rem; padding: 5px 12px; }
+
+    /* Interp rows */
+    .interp-row { font-size: 0.82rem; padding: 8px 10px; }
+
+    /* Discrimination grid */
+    .disc-grid { grid-template-columns: 1fr !important; }
+
+    /* Number inputs */
+    input[type=number], select { font-size: 0.9rem; padding: 8px 10px; }
   }
 
   /* CONTROLS */
@@ -1148,7 +1257,7 @@
       </div>
 
       <!-- ROW 2: Non-discriminating items side by side -->
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;" class="disc-grid">
 
         <div style="background: linear-gradient(135deg,#4a2020,#7a2828); border-radius:14px; padding:20px; color:white;">
           <div style="font-size:0.72rem; letter-spacing:0.09em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:6px;">❌ No discrimina — ítem inverso sin tratar</div>
